@@ -1,0 +1,35 @@
+<svg width="100%" height="100%" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" style="background-color: #0d0d0d">
+  <defs>
+    <linearGradient id="purpleGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8a2be2" stop-opacity="0.2"></stop>
+      <stop offset="100%" stop-color="#8a2be2" stop-opacity="0"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Circuit lines -->
+  <g stroke="#8a2be2" stroke-width="2">
+    <path d="M100 100 H300 V200 H500" opacity="0.3"></path>
+    <path d="M1600 300 H1400 V400 H1200" opacity="0.3"></path>
+    <path d="M300 800 H500 V900 H700" opacity="0.2"></path>
+    <path d="M1400 900 H1200 V1000 H1000" opacity="0.2"></path>
+    <path d="M500 200 V100 H600" opacity="0.15"></path>
+    <path d="M1000 600 H1100 V500 H1200" opacity="0.25"></path>
+  </g>
+
+  <!-- Dotted grid effect -->
+  <g fill="#8a2be2" opacity="0.05">
+    <circle cx="100" cy="100" r="2"></circle>
+    <circle cx="300" cy="100" r="2"></circle>
+    <circle cx="500" cy="100" r="2"></circle>
+    <circle cx="700" cy="100" r="2"></circle>
+    <circle cx="900" cy="100" r="2"></circle>
+    <circle cx="1100" cy="100" r="2"></circle>
+    <circle cx="1300" cy="100" r="2"></circle>
+    <circle cx="1500" cy="100" r="2"></circle>
+    <circle cx="1700" cy="100" r="2"></circle>
+    <!-- puedes repetir con más patrones si deseas -->
+  </g>
+
+  <!-- Soft glow overlay -->
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#purpleGlow)"></rect>
+</svg>
