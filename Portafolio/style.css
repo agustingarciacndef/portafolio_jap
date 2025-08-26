@@ -152,6 +152,10 @@ a:hover {
         padding: 10px;
     }
 
+    #perfil {
+        display: none;
+    }
+
     .nav-items {
         flex-direction: column;
         gap: 10px;
