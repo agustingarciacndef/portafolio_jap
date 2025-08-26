@@ -2,33 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-}
-
-.navbar {
-    height: 80px;
-    width: 100%;
-    background-color: rgb(51, 0, 80);
-    position: fixed;
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-    display: flex;
-    align-items: center;
-}
-
-.nav-items {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    margin-left: auto;
-    margin-right: 20px;
-}
-
-#perfil {
-    border-radius: 50%;
-    margin-left: 20px;
-    height: 65px;
-    width: 65px;
+    box-sizing: border-box;
 }
 
 body {
@@ -36,6 +10,32 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+    height: 80px;
+    width: 100%;
+    background-color: rgb(51, 0, 80);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#perfil {
+    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+}
+
+.nav-items {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin-left: auto;
 }
 
 a {
@@ -50,18 +50,19 @@ a {
 a:hover {
     background-color: white;
     color: rgb(51, 0, 80);
-    padding: 5px;
     border-radius: 9px;
 }
 
+/* ---------- SOBRE MI ---------- */
 #sobremi {
     display: flex;
-    height: 400px;
+    min-height: 400px;
     padding-top: 130px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     color: white;
+    text-align: center;
 }
 
 #nombre {
@@ -70,61 +71,67 @@ a:hover {
 }
 
 #presentacion {
-    max-width: 600px;
-    justify-content: justify;
-    text-align: center;
+    max-width: 90%;
     font-size: 1.5em;
     margin-top: 10px;
 }
 
+/* ---------- CONOCIMIENTOS ---------- */
 #conocimientos {
-    overflow-y: auto;
     color: white;
     display: flex;
-    height: 450px;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 100px;
+    margin: 50px auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
 }
 
 .boxes {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
-    width: 800px;
+    justify-content: center;
+    width: 100%;
 }
 
-.box1,
-.box2,
-.box3 {
-    margin-top: 20px;
+.box1, .box2, .box3 {
+    flex: 1 1 250px; /* mínimo 250px y se adapta */
+    max-width: 300px;
+    border: 1px solid white;
+    padding: 15px;
     display: flex;
     align-items: center;
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    border: 1px solid white;
 }
 
 .logos {
     height: 150px;
     width: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
+    max-width: 100%;
 }
 
+/* ---------- CONTACTO ---------- */
 #contacto {
-    height: 100px;
+    min-height: 100px;
     background-color: rgb(51, 0, 80);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 60px;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
 .iconos {
     filter: brightness(0) invert(1);
     height: 30px;
     width: auto;
+    max-width: 100%;
 }
 
 .div-img a {
@@ -136,4 +143,45 @@ a:hover {
 
 .div-img a:hover {
     background-color: black;
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .nav-items {
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px 0 0 0;
+    }
+
+    #nombre {
+        font-size: 2.5em;
+    }
+
+    #presentacion {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    #nombre {
+        font-size: 2em;
+    }
+
+    #presentacion {
+        font-size: 1em;
+    }
+
+    .box1, .box2, .box3 {
+        max-width: 90%;
+    }
+
+    #contacto {
+        gap: 20px;
+    }
 }
